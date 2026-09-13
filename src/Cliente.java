@@ -1,9 +1,11 @@
 public class Cliente {
+    /* Atributos Clientes */
     private int id;
     private String nome;
     private String telefone;
     private String email;
     private String Classificao;
+    /* -------------------------------------------------------------------------------------------------------------- */
 
     /* Construtor Java */
     public Cliente(int id, String nome, String telefone, String email, String classificao) {
@@ -13,6 +15,7 @@ public class Cliente {
         this.email = email;
         Classificao = classificao;
     }
+    /* -------------------------------------------------------------------------------------------------------------- */
 
     /* Getters para transformar o Private em Public */
     public int getId() {
