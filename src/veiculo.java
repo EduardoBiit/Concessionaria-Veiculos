@@ -11,10 +11,10 @@ public class veiculo {
     /* Construtor Java */
     public veiculo(int id, String modelo, int ano, String marca, String cor, int preco) {
         this.id = id;
-        Modelo = modelo;
-        Ano = ano;
-        Marca = marca;
-        Cor = cor;
+        this.Modelo = modelo;
+        this.Ano = ano;
+        this.Marca = marca;
+        this.Cor = cor;
         this.preco = preco;
     }
     /* -------------------------------------------------------------------------------------------------------------- */
