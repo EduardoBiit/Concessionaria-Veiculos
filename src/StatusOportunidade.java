@@ -1,5 +1,5 @@
  public class StatusOportunidade {
-     public enum Status {
+     public enum Status { /* enum mantem uma ordem fixa de cronologia, não permitindo pular a ordem entre os outros. */
          NOVO_LEAD,
          CONTATO_REALIZADO,
          TEST_DRIVE,
@@ -8,10 +8,11 @@
          PERDIDO
      }
 
-     private Status status = Status.NOVO_LEAD;
+     private Status status = Status.NOVO_LEAD; /* criando uma variavel para os status. */
 
      public void alterarstatus(Status novoStatus) {
-         // Usa 'this.status' para verificar o estado atual do objeto
+         /* sequencias de if e else com intuito a organização e comparação de requisitos para novas etapas
+          Usa 'this.status' para verificar o estado atual do objeto */
          if (this.status == Status.NOVO_LEAD && novoStatus == Status.CONTATO_REALIZADO) {
              this.status = novoStatus;
          } else if (this.status == Status.CONTATO_REALIZADO && novoStatus == Status.TEST_DRIVE) {
