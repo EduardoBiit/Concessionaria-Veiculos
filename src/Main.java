@@ -1,13 +1,34 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println("Hello and welcome!");
+import java.lang.classfile.instruction.SwitchCase;
+import java.util.Scanner;
 
-    for (int i = 1; i <= 10; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = alo" + i);
+public class Main {
+    public static void main(String[] args) {
+        int escolha = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        Usuarios Vendendor = new Vendedor(01, "Davi");
+        Usuarios Administrador = new Administrador(02, "Eduardo");
+
+        Vendendor.VisualizarOportunidade();
+        Administrador.VisualizarOportunidade();
+
+        do {
+            System.out.println("==== MENU ====");
+            System.out.println("1. Cadastrar Cliente");
+            System.out.println("2. Listar Clientes");
+            System.out.println("3. Remover Cliente");
+            System.out.println("4. Cadastrar Oportunidade");
+            System.out.println("5. Listar Oportunidades (Funil Vendas)");
+            System.out.println("6. Avançar Status da Oportunidade");
+            System.out.println("7. Remover Oportunidade");
+            System.out.println("0. Sair");
+            System.out.println("Escolha uma opção: ");
+            escolha = scanner.nextInt();
+
+            switch (escolha) {
+
+            }
+
+        } while (escolha != 6);
     }
 }
