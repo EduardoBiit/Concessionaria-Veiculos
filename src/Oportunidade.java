@@ -1,52 +1,44 @@
 public class Oportunidade {
-    /* Atributos Oportunidade */
     private int id;
-    private int cliente;
+    private int clienteId;
     private String veiculo;
     private String tipo;
     private int valorEstimado;
-    private String status;
+    private StatusOportunidade.Status status;
     private String dataPrevista;
-    /* -------------------------------------------------------------------------------------------------------------- */
 
-    /* Construtor Java */
-    public Oportunidade(int id, int cliente, String veiculo, String tipo, int valorEstimado, String status, String dataPrevista) {
+    public Oportunidade(int id, int clienteId, String veiculo, String tipo, int valorEstimado, String dataPrevista) {
         this.id = id;
-        this.cliente = cliente;
+        this.clienteId = clienteId;
         this.veiculo = veiculo;
         this.tipo = tipo;
         this.valorEstimado = valorEstimado;
-        this.status = status;
+        this.status = StatusOportunidade.Status.NOVO_LEAD; // Inicia sempre como NOVO_LEAD
         this.dataPrevista = dataPrevista;
     }
-    /* -------------------------------------------------------------------------------------------------------------- */
 
-    /* Getters */
-    public int getId() {
-        return id;
+    /* Sequencias de if e else com intuito  */
+    public void alterarStatus(StatusOportunidade.Status novoStatus) {
+        if (this.status == StatusOportunidade.Status.NOVO_LEAD && novoStatus == StatusOportunidade.Status.CONTATO_REALIZADO) {
+            this.status = novoStatus;
+        } else if (this.status == StatusOportunidade.Status.CONTATO_REALIZADO && novoStatus == StatusOportunidade.Status.TEST_DRIVE) {
+            this.status = novoStatus;
+        } else if (this.status == StatusOportunidade.Status.TEST_DRIVE && novoStatus == StatusOportunidade.Status.PROPOSTA_FINANCIAMENTO) {
+            this.status = novoStatus;
+        } else if (this.status == StatusOportunidade.Status.PROPOSTA_FINANCIAMENTO && novoStatus == StatusOportunidade.Status.GANHO) {
+            this.status = novoStatus;
+        } else if (novoStatus == StatusOportunidade.Status.PERDIDO) {
+            this.status = novoStatus;
+        } else {
+            System.out.println("Mudança de Status não permitida! Transição inválida no funil.");
+        }
     }
 
-    public int getCliente() {
-        return cliente;
-    }
-
-    public int getValorEstimado() {
-        return valorEstimado;
-    }
-
-    public String getDataPrevista() {
-        return dataPrevista;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public String getVeiculo() {
-        return veiculo;
-    }
+    public int getId() { return id; }
+    public int getClienteId() { return clienteId; }
+    public String getVeiculo() { return veiculo; }
+    public String getTipo() { return tipo; }
+    public int getValorEstimado() { return valorEstimado; }
+    public StatusOportunidade.Status getStatus() { return status; }
+    public String getDataPrevista() { return dataPrevista; }
 }
