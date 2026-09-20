@@ -43,4 +43,26 @@ public class veiculo {
     public String getModelo() {
         return Modelo;
     }
+    /* -------------------------------------------------------------------------------------------------------------- */
+
+    /* Setters (adicionados para permitir o UPDATE do CRUD) */
+    public void setModelo(String modelo) {
+        this.Modelo = modelo;
+    }
+
+    public void setAno(int ano) {
+        this.Ano = ano;
+    }
+
+    public void setMarca(String marca) {
+        this.Marca = marca;
+    }
+
+    public void setCor(String cor) {
+        this.Cor = cor;
+    }
+
+    public void setPreco(int preco) {
+        this.preco = preco;
+    }
 }

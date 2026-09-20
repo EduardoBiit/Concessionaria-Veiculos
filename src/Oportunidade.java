@@ -41,4 +41,11 @@ public class Oportunidade {
     public int getValorEstimado() { return valorEstimado; }
     public StatusOportunidade.Status getStatus() { return status; }
     public String getDataPrevista() { return dataPrevista; }
+
+    /* Setters (adicionados para permitir o UPDATE do CRUD).
+     * O status NÃO tem setter direto: ele só muda pela regra de negócio em alterarStatus(). */
+    public void setVeiculo(String veiculo) { this.veiculo = veiculo; }
+    public void setTipo(String tipo) { this.tipo = tipo; }
+    public void setValorEstimado(int valorEstimado) { this.valorEstimado = valorEstimado; }
+    public void setDataPrevista(String dataPrevista) { this.dataPrevista = dataPrevista; }
 }
