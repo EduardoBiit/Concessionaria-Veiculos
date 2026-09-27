@@ -17,4 +17,9 @@ public abstract class Usuarios {
     public String getName() {
         return name;
     }
+
+    /* Setter (adicionado para permitir o UPDATE do CRUD) */
+    public void setName(String name) {
+        this.name = name;
+    }
 }
